@@ -80,9 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!fileUpload.files.length) {
                 errorMessage.textContent = 'Please upload a file before analysing.';
                 errorMessage.style.display = 'block';
-                analyseButton.disabled = true; // Ensure button stays disabled if no file
+                analyseButton.disabled = true;
             } else {
-                // Proceed with analysis (demo navigation)
                 window.location.href = 'results.html';
             }
         });
@@ -100,24 +99,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Results Page: Handle Add to Dashboard Button
     const addButton = document.querySelector('.add-to-dashboard');
     if (addButton) {
         addButton.addEventListener('click', function() {
-            // In real app, update dashboard data; for demo, navigate back
             window.location.href = 'hey.html';
         });
     }
 
-    // File Upload and Image Handling
 
     if (fileUpload && errorMessage && uploadedImage) {
         fileUpload.addEventListener('change', function() {
             if (fileUpload.files.length > 0) {
-                errorMessage.style.display = 'none'; // Hide error if file is selected
-                if (analyseButton) analyseButton.disabled = false; // Enable analyse button
+                errorMessage.style.display = 'none';
+                if (analyseButton) analyseButton.disabled = false;
 
-                // Display image if it's an image file
                 const file = fileUpload.files[0];
                 const reader = new FileReader();
                 reader.onload = function(e) {
@@ -125,11 +120,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (file.type.startsWith('image/')) {
                         uploadedImage.innerHTML = `<img src="${fileData}" style="max-width: 200px; max-height: 200px; border-radius: 10px;">`;
                         uploadedImage.style.display = 'block';
-                        localStorage.setItem('uploadedFile', fileData); // Store for results page
+                        localStorage.setItem('uploadedFile', fileData);
                     } else if (file.type === 'application/pdf') {
                         uploadedImage.innerHTML = `<embed src="${fileData}" type="application/pdf" style="width: 200px; height: 200px;">`;
                         uploadedImage.style.display = 'block';
-                        localStorage.setItem('uploadedFile', fileData); // Store for results page
+                        localStorage.setItem('uploadedFile', fileData);
                     } else {
                         uploadedImage.innerHTML = `<p>File type not supported for preview. Content: ${fileData.substring(0, 50)}...</p>`;
                         uploadedImage.style.display = 'block';

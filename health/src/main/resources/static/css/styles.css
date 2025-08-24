@@ -1,4 +1,4 @@
-/* styles.css */
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -73,8 +73,8 @@ body {
 }
 
 .profile img {
-    width: 50px; /* Adjust this value as needed */
-    height: 50px; /* Adjust this value as needed */
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -93,7 +93,7 @@ body {
 .sidebar {
     position: fixed;
     left: 0;
-    top: 60px; /* Below top nav */
+    top: 60px;
     bottom: 0;
     width: 60px;
     background: #007BFF;
@@ -219,7 +219,7 @@ h2 {
 
 .patient-details {
     grid-column: 3;
-    /* grid-row: 1;  Span rows for taller card */
+
 }
 
 .patient-card {
@@ -239,8 +239,8 @@ h2 {
 }
 
 .patient-photo img {
-    width: 50px; /* Adjust this value as needed */
-    height: 50px; /* Adjust this value as needed */
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -349,14 +349,14 @@ h2 {
 .connector {
     border-left: 2px solid #007BFF;
     height: 20px;
-    margin-left: 15px; /* Align with icon */
+    margin-left: 15px;
 }
 
-/* Upload Page Styles */
+
 .upload-section {
-    grid-column: 1; /* Anchors to the left side */
+    grid-column: 1;
     width: 600px;
-    height: 500px; /* Adjust this value to decrease/increase width as needed */
+    height: 500px;
     background: white;
     border-radius: 10px;
     padding: 40px;
@@ -397,11 +397,10 @@ h2 {
     cursor: pointer;
 }
 
-/* Results Page Styles */
 .results-section {
-    grid-column: 3; /* Anchors to the left side */
+    grid-column: 3;
     width: 600px;
-    height: 500px; /* Adjust this value to decrease/increase width as needed */
+    height: 500px;
     background: white;
     border-radius: 10px;
     padding: 40px;
@@ -443,7 +442,6 @@ h2 {
     margin-top: 20px;
 }
 
-/* Add this to styles.css to style the uploaded image and error message */
 #uploaded-image img {
     border: 1px solid #ddd;
 }

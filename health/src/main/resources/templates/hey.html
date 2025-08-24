@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Dashboard</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" th:href="@{/css/styles.css}">
 
-    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 <div class="container">
-    <!-- Top Navigation Bar -->
     <nav class="top-nav">
         <div class="left-nav">
             <h1>Hehehealth</h1>
@@ -32,17 +28,14 @@
         </div>
     </nav>
 
-    <!-- Left Sidebar -->
     <aside class="sidebar">
         <ul>
             <li class="active"><i class="fas fa-dashboard"></i></li>
-            <li><a th:href="@{/dash/upload}"><i class="fas fa-upload"></i></a></li> <!-- New upload link -->
+            <li><a th:href="@{/dash/upload}"><i class="fas fa-upload"></i></a></li>
         </ul>
     </aside>
 
-    <!-- Main Content -->
     <main class="main-content">
-        <!-- Vitals Section -->
         <section class="vitals-section">
             <div class="graph">
                 <div class="tabs">
@@ -60,7 +53,6 @@
             </div>
         </section>
 
-        <!-- Patient Details Section -->
         <section class="patient-details">
             <div class="patient-card">
                 <div class="patient-photo">
@@ -70,7 +62,6 @@
                 <div class="patient-info">
                     <h3>Angela Martin</h3>
                     <div class="buttons">
-                        <!-- <button class="update">Update <i class="fas fa-arrow-right"></i></button> -->
                         <button class="share">Share <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
@@ -86,7 +77,6 @@
             </div>
         </section>
 
-        <!-- Requested Reports & Tests -->
         <section class="reports-section">
             <h2>MY REPORTS & TESTS HISTORY</h2>
             <div class="reports-grid">
