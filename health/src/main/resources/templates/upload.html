@@ -18,21 +18,14 @@
     <!-- Top Navigation Bar -->
     <nav class="top-nav">
         <div class="left-nav">
-            <i class="fas fa-bars hamburger"></i>
-            <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search for patient name or UID">
-            </div>
+            <h1>Hehehealth</h1>
         </div>
         <div class="right-nav">
             <i class="fas fa-bell notification"></i>
             <div class="profile">
-                <img th:src="@{/images/profile-placeholder.png}" alt="Dr. Steve Vai">
-                <span>Dr. Steve Vai</span>
+                <img th:src="@{/images/woman.jpg}" alt="">
+                <span>Angela Martin</span>
                 <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="logo">
-                <i class="fas fa-apple-alt"></i>
             </div>
         </div>
     </nav>
@@ -41,7 +34,6 @@
     <aside class="sidebar">
         <ul>
             <li><a th:href="@{/dash}"><i class="fas fa-users"></i></a></li>
-            <li><i class="fas fa-comment-dots"></i></li>
             <li class="active"><i class="fas fa-upload"></i></li>
         </ul>
     </aside>
