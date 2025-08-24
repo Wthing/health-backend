@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <div class="left-nav">
+            <h1>Hehehealth</h1>
+        </div>
+        <div class="right-nav">
+            <i class="fas fa-bell notification"></i>
+            <div class="profile">
+                <img th:src="@{/images/woman.jpg}" alt="Profile">
+                <span>Angela Martin</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </nav>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a th:href="@{/dash}"><i class="fas fa-dashboard"></i></a></li>
+            <li class="active"><i class="fas fa-upload"></i></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <section class="upload-section">
+            <h2>UPLOAD STATUS</h2>
+            <div class="upload-card">
+                <p th:text="${message}"></p>
+            </div>
+        </section>
+
+        <section class="results-section" th:if="${report}">
+            <h2>ANALYSIS RESULTS</h2>
+            <div class="results-card">
+                <div class="summary">
+                    <h3>Summary</h3>
+                    <p th:text="${report}"></p>
+                </div>
+                <button class="add-to-dashboard">Add to the dashboard</button>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

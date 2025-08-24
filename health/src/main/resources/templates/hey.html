@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="left-nav">
+            <h1>Hehehealth</h1>
+        </div>
+        <div class="right-nav">
+            <div class="profile">
+                <img src="/static/images/woman.jpg" alt="">
+                <span>Angela Martin</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="logo">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <ul>
+            <li class="active"><i class="fas fa-dashboard"></i></li>
+            <li><a th:href="@{/dash/upload}"><i class="fas fa-upload"></i></a></li> <!-- New upload link -->
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Vitals Section -->
+        <section class="vitals-section">
+            <div class="graph">
+                <div class="tabs">
+                    <h2>Health data</h2>
+                </div>
+                <canvas id="bpChart"></canvas>
+                <div class="current-bp">14g/dL <small>Hemoglobin</small></div>
+            </div>
+            <div class="graphtwo">
+                <div class="tabs">
+                    <h2>Health data</h2>
+                </div>
+                <canvas id="bpChartsec"></canvas>
+                <div class="current-bp2">38% <small>Hematocrit</small></div>
+            </div>
+        </section>
+
+        <!-- Patient Details Section -->
+        <section class="patient-details">
+            <div class="patient-card">
+                <div class="patient-photo">
+                    <img src="/static/images/woman.jpg" alt="Angela Martin">
+                    <i class="fas fa-pencil-alt edit-icon"></i>
+                </div>
+                <div class="patient-info">
+                    <h3>Angela Martin</h3>
+                    <div class="buttons">
+                        <!-- <button class="update">Update <i class="fas fa-arrow-right"></i></button> -->
+                        <button class="share">Share <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="details-grid">
+                    <div><span>Age</span><p>27</p></div>
+                    <div><span>Gender</span><p>Female</p></div>
+                    <div><span>Blood Group</span><p>O+ve</p></div>
+                    <div><span>Height (m)</span><p>1.78</p></div>
+                    <div><span>Weight (kg)</span><p>65</p></div>
+                    <div><span>BMI (kg/m2)</span><p>20.5</p></div>
+                    <div><span>BF Percentage</span><p>27%</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requested Reports & Tests -->
+        <section class="reports-section">
+            <h2>MY REPORTS & TESTS HISTORY</h2>
+            <div class="reports-grid">
+                <div class="report-card">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Full Body</span>
+                    <small>July 20, 2019</small>
+                </div>
+                <div class="report-card">
+                    <i class="fas fa-x-ray"></i>
+                    <span>X-Ray Scan</span>
+                    <small>April 30, 2019</small>
+                </div>
+                <div class="report-card">
+                    <i class="fas fa-vial"></i>
+                    <span>Blood Test</span>
+                    <small>February 02, 2019</small>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>
